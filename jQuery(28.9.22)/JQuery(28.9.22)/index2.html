@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <script>
+         $(document).ready(function(){
+            // $("#div1").html("Height = " + $('#Image1').height() + "<br/>" + "Width = " + $('#Image1').width());
+            $('#Image1').on({
+                mouseenter:function(){
+                    //   $("#div1").html("Height = " + $('#Image1').height() +"<br/>" +"Width = " + $('#Image1').width());
+                      $("#Image1").animate({
+                        height: "+=5rem",
+                        width: "+=5rem"
+                      });
+                },
+                mouseleave:function(){
+                    // $("#div1").html(' <img src="./img1.avif" alt="" id="Image1">');
+                    $("#Image1").animate({
+                        height: "-=5rem",
+                        width: "-=5rem"
+                      });
+                }
+            });
+         });
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <img src="./img1.avif" alt="" id="Image1">
+    </div>
+</body>
+</html>
